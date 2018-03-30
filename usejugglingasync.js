@@ -16,12 +16,18 @@ mymodule(urls, function(err, result, url){
     /**
      * I think the forEach was screwing me over because it is async 
      */
-    for (let index = 0; index < result.length; index++) {
-        const element = result[index];
-        // console.log('index[', index, ']: ', element); 
-        console.log(element); 
-    }
-        
+    // for (let index = 0; index < result.length; index++) {
+    //     const element = result[index];
+    //     // console.log('index[', index, ']: ', element); 
+    //     console.log(element); 
+    // }
+
+    /**
+     * after trying forEach() again, i have realized that forEach was not the issue
+     */
+    result.forEach(element=>{
+        console.log(element)
+    })
     // console.log('in here');
     
     // console.log(datapack);
